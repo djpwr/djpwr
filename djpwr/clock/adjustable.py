@@ -1,6 +1,6 @@
 import datetime
 
-from clock import DatetimeWrapper
+from djpwr.clock import DatetimeWrapper
 
 try:
     from dateutil.relativedelta import relativedelta
