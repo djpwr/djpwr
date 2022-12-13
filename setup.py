@@ -7,5 +7,5 @@ setup(name="djpwr",
       author="Ruud de Klerk",
       author_email="ruud@codeveloped.nl",
       url='https://github.com/djpwr/djpwr',
-      packages=['djpwr']
+      packages=['djpwr', 'djpwr.admin', 'djpwr.clock']
 )
