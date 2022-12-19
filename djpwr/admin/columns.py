@@ -22,9 +22,9 @@ class AttributeColumn:
             value = cls.get_value(obj, attribute_lookup,  **kwargs)
 
             if value is None:
-                return cls.format_empty_value(self, **kwargs)
+                return cls.format_empty_value(**kwargs)
 
-            return cls.format_value(self, value, **kwargs)
+            return cls.format_value(value, **kwargs)
 
         description = description or cls.description
 
