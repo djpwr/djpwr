@@ -54,5 +54,13 @@ class DeviceRegistry(object):
 
         self._devices[device_name] = (value, False)
 
+    def register_manager(self, device_name, manager_attr='objects'):
+        def model_class_wrapper(model_class):
+            self[device_name] = getattr(model_class, manager_attr)
+
+            return model_class
+
+        return model_class_wrapper
+
 
 dev = DeviceRegistry()
