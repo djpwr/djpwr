@@ -8,13 +8,16 @@ class ReusableForeignKey(models.ForeignKey):
     Example:
         apps.example.fields.py
 
-        ExampleForeignKey(ReusableForeignKey):
+        class ExampleForeignKey(ReusableForeignKey):
             model_label = 'example.Example'
             verbose_name = _("Example")
 
         apps.some_app.models.py
 
         class SomeModel(models.Model):
+            class Meta:
+                default_related_name = 'some_models'
+
             example = ExampleForeignKey(on_delete=models.CASCADE)
     """
     model_label = None

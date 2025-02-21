@@ -4,9 +4,9 @@ def lookup_value(obj, lookup, separator='.'):
     """
     Traverse an objects attributes to find a value.
 
-    :param obj: Object to start value traversion
+    :param obj: Object to start value traversing
     :param lookup: Lookup string that defines attribute search
-    :param separator: Spearator used in the lookup string
+    :param separator: Separator used in the lookup string
     :return: Value
 
     Examples:

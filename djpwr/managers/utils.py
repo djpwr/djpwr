@@ -1,7 +1,10 @@
-from django.apps import apps as django_apps
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models.manager import BaseManager
 from django.http import Http404
+
+from django.apps import apps as django_apps
+
+django_get_model = django_apps.get_model
 
 
 def get_model(label):
@@ -13,7 +16,7 @@ def get_model(label):
     """
     app_label, model_name = label.split('.')
 
-    return django_apps.get_model(app_label=app_label, model_name=model_name)
+    return django_get_model(app_label=app_label, model_name=model_name)
 
 
 def get_manager(label, manager_name=None):

@@ -62,7 +62,7 @@ def attr_column(lookup, description=None, boolean=None):
     class BookAdmin(admin.ModelAdmin):
         list_display = ['publisher_province']
 
-        publisher_province = attr_column('publisher.address.city.province',_("Province"))
+        publisher_province = attr_column('publisher.address.city.province', _("Province"))
     """
 
     return AttributeColumn.build(lookup, description, boolean=boolean)
