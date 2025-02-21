@@ -5,3 +5,8 @@ version = "0.0.4"
 authors = [
     { name = "Ruud de Klerk", email = "ruud@codeveloped.nl" }
 ]
+
+[build-system]
+requires = [
+    "setuptools"
+]
